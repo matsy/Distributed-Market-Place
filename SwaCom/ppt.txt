@@ -1,0 +1,38 @@
+1. The distributed streaming applications are deployed in DSPFs running on large clusters
+2. Streaming sources: heterogenity in transfer protocols, data being transferred.
+3. GW - no processing or buffering is involved.
+4. DSPF engine can best be depicted using this diagram.
+5. The top layer defines the user APIs where a streaming application is defined as a graph. 
+6. The events flow through the edges of this graph and processing happens at the nodes. 
+7. The user graph is then converted to an execution graph and components based on resource scheduling, network latency, flow control.
+of this are distributed to a set of workers/executors across a cluster of nodes.
+8. DSPF User graph can be run on other DSPF's execution graph	
+
+Limitations:
+1. Low Power Nodes or resources constraints: Computation overhead compared to Network overhead
+2. We can't run message queues because of resource constraints and here queue acts as source to streaming applications for load balancing.
+3. ML code cannot be programmed in a way to take advantage of this opportunity.
+
+Cloud-Only system:
+C. High Latency network conditions, cannot afford such a high latency
+
+Edge Computing: bring the computation closer to the device.
+C: Still suffers from the same problem
+
+Mobile-Cloud Computing: divide code into granular level and execute some of these on cloud
+A: optimizes energy consumption and offload only those that are heavy since low network C: high latency 
+
+
+Swing Approach:
+A: Distributed framework with computing done at the local level.
+D: designed for mobile, so has high resources and expects intermittent node connections whereas our camera systems are always up and connected and not that prone to failure. 
+
+
+ATOS Approach: Immediate action and low latency code stubs are executed at edge. not so important on Cloud. not so important ones on local. Automated, self-organized and self-managed model called swarm computing.
+
+
+Communication Technologies:
+High range implies higher error rate, low power with possibly high latency networks like HaLow, Bluetooth etc.
+
+Modern CPU Architecture:
+Advancements are so good that we have 64bit and 2GB internal memory.
